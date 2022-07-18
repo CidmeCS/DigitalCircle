@@ -27,8 +27,14 @@ app.get('/main.js', (req, res) => {
     res.sendFile(__dirname + '/main.js')
 })
 
-app.get('/table', (req, res) => {
-    res.sendFile(__dirname + '/table.html')
+app.get('/index.html', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
+})
+app.get('/index', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
+})
+app.get('/', (req, res) => {
+    res.sendFile(__dirname + '/index.html')
 })
 
 
@@ -57,5 +63,9 @@ app.post('/api/post/texto', async (req, res) => {
     }
 })
 
-app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
+app.listen(PORT, () => 
+    console.log(`Server running on port ${PORT}`),
+    console.log(`http://localhost:${PORT}/index.html`)
+
+    )
 
