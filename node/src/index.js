@@ -19,6 +19,10 @@ app.use(express.static('public'))
 app.get('/form', (req, res) => {
     res.sendFile(__dirname + '/form.html')
 })
+app.get('/form.html', (req, res) => {
+    res.sendFile(__dirname + '/form.html')
+})
+
 app.get('/post.js', (req, res) => {
     res.sendFile(__dirname + '/post.js')
 })
@@ -52,7 +56,6 @@ app.get('/api/get/textos', async (req, res) => {
 
 //inserir
 app.post('/api/post/texto', async (req, res) => {
-    console.log('recebendo...');
     const { col_texto } = req.body
     const today = new Date(Date.now());
     try {

@@ -1,0 +1,8 @@
+[api]
+port = "9000"
+
+[database]
+host = "motty.db.elephantsql.com"
+user = "kkwzwlbl"
+pass = "deVFNjYu7jwlF1evYmwXe_xKJec33GGR"
+name = "kkwzwlbl" 
